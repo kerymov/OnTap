@@ -10,11 +10,9 @@ import com.example.ontap.R
 
 val Typography = Typography(
     defaultFontFamily = FontFamily(
-        fonts = listOf(
-            Font(R.font.roboto_light),
-            Font(R.font.roboto_regular),
-            Font(R.font.roboto_medium)
-        )
+        Font(R.font.roboto_light, FontWeight.Light),
+        Font(R.font.roboto_regular, FontWeight.Normal),
+        Font(R.font.roboto_medium, FontWeight.Medium)
     ),
     h1 = TextStyle(
         fontWeight = FontWeight.Medium,
