@@ -4,24 +4,18 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.ontap.navigation.Navigation
 import com.example.ontap.navigation.NavigationItem
 import com.example.ontap.navigation.Screen
-import com.example.ontap.navigation.components.BottomNavigationBar
+import com.example.ontap.components.BottomNavigationBar
+import com.example.ontap.components.TopBar
 import com.example.ontap.ui.theme.OnTapTheme
 
 class MainActivity : ComponentActivity() {
@@ -44,6 +38,12 @@ private fun Content(
     navController: NavHostController,
     modifier: Modifier
 ) = Scaffold(
+    topBar = {
+        TopBar(
+            eventLabel = "3x3 cube",
+            onSelectEventButtonClick = { /*TODO*/ }
+        )
+    },
     bottomBar = {
         BottomNavigationBar(
             items = listOf(

@@ -1,11 +1,10 @@
-package com.example.ontap.navigation.components
+package com.example.ontap.components
 
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -23,7 +22,7 @@ internal fun BottomNavigationBar(
     val backStackEntry by navController.currentBackStackEntryAsState()
     BottomNavigation(
         modifier = modifier,
-        backgroundColor = MaterialTheme.colors.primary,
+        backgroundColor = MaterialTheme.colors.primary
     ) {
         items.forEach { item ->
             val isSelected = item.route == backStackEntry?.destination?.route
