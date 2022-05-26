@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
-internal class Timer {
+class Timer {
 
     var formattedTime by mutableStateOf("00:00.00")
 

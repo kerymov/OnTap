@@ -5,10 +5,7 @@ import androidx.annotation.RequiresApi
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.OutlinedButton
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -83,35 +80,6 @@ private fun TimerView(
     Text(
         text = formattedTime,
         style = MaterialTheme.typography.h1,
-        color = MaterialTheme.colors.primaryVariant
-    )
-}
-
-@Composable
-private fun ShortResults(
-    times: List<String>,
-    modifier: Modifier = Modifier
-) = LazyRow(
-    modifier = modifier
-) {
-    items(times) { time ->
-
-    }
-}
-
-@Composable
-private fun ShortResultsItem(
-    time: String,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) = OutlinedButton(
-    onClick = onClick,
-    modifier = modifier
-) {
-    Text(
-        text = "avg5: $time",
-        style = MaterialTheme.typography.button,
-        textAlign = TextAlign.Center,
         color = MaterialTheme.colors.primaryVariant
     )
 }
