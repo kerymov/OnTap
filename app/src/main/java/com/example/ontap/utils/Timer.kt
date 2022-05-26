@@ -1,4 +1,4 @@
-package com.example.ontap
+package com.example.ontap.utils
 
 import android.os.Build
 import androidx.annotation.RequiresApi

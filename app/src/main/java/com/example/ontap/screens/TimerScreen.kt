@@ -15,8 +15,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.example.ontap.ScrambleGenerator
-import com.example.ontap.Timer
+import com.example.ontap.utils.ScrambleGenerator
+import com.example.ontap.utils.Timer
 
 @RequiresApi(Build.VERSION_CODES.O)
 @Composable

@@ -1,4 +1,4 @@
-package com.example.ontap
+package com.example.ontap.utils
 
 import kotlin.random.Random
 
