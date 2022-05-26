@@ -16,7 +16,8 @@ internal class Timer {
     var formattedTime by mutableStateOf("00:00.00")
 
     private var coroutineScope = CoroutineScope(Dispatchers.Main)
-    private var isActive = false
+    var isActive = false
+        private set
 
     private var timeMillis = 0L
     private var lastTimestamp = 0L
@@ -28,7 +29,7 @@ internal class Timer {
         coroutineScope.launch {
             lastTimestamp = System.currentTimeMillis()
             this@Timer.isActive = true
-            while (isActive) {
+            while (this@Timer.isActive) {
                 delay(10L)
                 timeMillis += System.currentTimeMillis() - lastTimestamp
                 lastTimestamp = System.currentTimeMillis()
